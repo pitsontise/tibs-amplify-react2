@@ -6,7 +6,7 @@ function LandingPage() {
   return (
     <Page > 
       <Header>       
-            <AppTitle>Tibs Procure</AppTitle>            
+            <AppTitle>TIBS Procure</AppTitle>            
               <Menu >
                 <MenuItem href="#">Home</MenuItem>
                 <MenuItem href="#">About us</MenuItem>
