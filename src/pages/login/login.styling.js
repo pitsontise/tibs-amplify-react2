@@ -11,18 +11,6 @@ export const BackgroundImage = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Card = styled.div`
-  background-color: white;
-  border-radius: 20px;
-  width: 40vw;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-`;
-
 export const FormContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

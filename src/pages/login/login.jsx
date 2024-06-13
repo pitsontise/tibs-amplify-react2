@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router";
-import { BackgroundImage, Card, FormContainer } from "./login.styling";
-import { H3 } from "../../components/utils/typography";
+import { BackgroundImage, FormContainer } from "./login.styling";
+import { H2 } from "../../components/utils/typography";
 import Input from "../../components/form/input/input.component";
 import Button from "../../components/button.component";
 import colors from "../../components/utils/colors";
+import Card from "../../components/card/Card";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Login = () => {
   return (
     <BackgroundImage>
       <Card>
-        <H3>Login Page</H3>
+        <H2>Login Page</H2>
         <FormContainer>
           <Input label="Username" placeholder="Please enter username" />
           <Input
