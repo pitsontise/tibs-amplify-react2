@@ -1,10 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import tibsprocurelogo from '../tibs-procure-logo.jpg';
 import { Page, Header, AppTitle, MenuItem, Menu, ButtonContainer, Button, WelcomeContainer, LogoContainer, AboutContainer, TestContainer, BlackCard, EProcurementContainer, EProcureSubTitle} from './landing.styling';
 
 import Input from '../components/form/input/input.component';
 
 function LandingPage() {
+  const navigate = useNavigate();
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
   return (
     <Page > 
       <Header>       
@@ -16,7 +22,7 @@ function LandingPage() {
                 <MenuItem href="#">Contact</MenuItem>            
               </Menu>
               <ButtonContainer>
-                <Button href="#">Login</Button>
+                <Button onClick={goToLogin}>Login</Button>
                 <Button href="#">Sign Up</Button>    
             </ButtonContainer>
       </Header>
@@ -27,7 +33,7 @@ function LandingPage() {
             
         <div className="newsletter">
           <form>
-            <Input label="Testing" placeholder="ewybehd" />
+            <Input label="eTenders" placeholder="Search for eTenders" />
              {/* <input type="eTenders" name="eTenders" id="tender" placeholder="Search for eTenders" /> */}
              <input type="submit" name="submit" value="Let's Start" />
           </form>
