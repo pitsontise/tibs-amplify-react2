@@ -27,7 +27,7 @@ function LandingPage() {
             
         <div className="newsletter">
           <form>
-            <Input label="Testing" placeholder="ewybehd" type="password" />
+            <Input label="Testing" placeholder="ewybehd" />
              {/* <input type="eTenders" name="eTenders" id="tender" placeholder="Search for eTenders" /> */}
              <input type="submit" name="submit" value="Let's Start" />
           </form>

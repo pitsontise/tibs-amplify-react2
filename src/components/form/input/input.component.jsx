@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { InputContainer, ErrorContainer, StyledInput } from "./input.styling";
+import { InputContainer, ErrorContainer, StyledInput, StyledLabel } from "./input.styling";
 
 const Input = (props) => {
     const { type, label, placeholder, error} = props;
 
     return (
         <InputContainer>
-         <div>{label}</div>
+         <StyledLabel>{label}</StyledLabel>
             <StyledInput
                 label={label}
                 type={type}
