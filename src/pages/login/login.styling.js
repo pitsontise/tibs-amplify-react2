@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import tibsprocurebackground from "../../tibs-procure-background.jpg";
+import tibsprocurebackground from "../../res/tibs-procure-background.jpg";
 
 export const BackgroundImage = styled.div`
   background-image: url(${tibsprocurebackground});
@@ -27,6 +27,7 @@ export const FormContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   flex-direction: column;
   width: 30vw;
   height: auto;

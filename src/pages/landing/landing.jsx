@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import tibsprocurelogo from "../tibs-procure-logo.jpg";
+import tibsprocurelogo from "../../res/tibs-procure-logo.jpg";
 import {
   Page,
   Header,
@@ -17,8 +17,8 @@ import {
   EProcureSubTitle,
 } from "./landing.styling";
 
-import Input from "../components/form/input/input.component";
-import Button from "../components/button.component";
+import Input from "../../components/form/input/input.component";
+import Button from "../../components/button.component";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -40,8 +40,8 @@ function LandingPage() {
           <MenuItem href="#">Contact</MenuItem>
         </Menu>
         <ButtonContainer>
-          <Button onClick={goToLogin}>Login</Button>
-          <Button onClick={handleClick}>Sign Up</Button>
+          <Button title="Login" onClick={goToLogin} />
+          <Button title="Sign Up" onClick={handleClick} />
         </ButtonContainer>
       </Header>
 
