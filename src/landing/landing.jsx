@@ -2,6 +2,8 @@ import React from 'react';
 import tibsprocurelogo from '../tibs-procure-logo.jpg';
 import { Page, Header, AppTitle, MenuItem, Menu, ButtonContainer, Button, WelcomeContainer, LogoContainer, AboutContainer, TestContainer, BlackCard, EProcurementContainer, EProcureSubTitle} from './landing.styling';
 
+import Input from '../components/form/input/input.component';
+
 function LandingPage() {
   return (
     <Page > 
@@ -25,7 +27,8 @@ function LandingPage() {
             
         <div className="newsletter">
           <form>
-             <input type="eTenders" name="eTenders" id="tender" placeholder="Search for eTenders" />
+            <Input label="Testing" placeholder="ewybehd" type="password" />
+             {/* <input type="eTenders" name="eTenders" id="tender" placeholder="Search for eTenders" /> */}
              <input type="submit" name="submit" value="Let's Start" />
           </form>
         </div>
