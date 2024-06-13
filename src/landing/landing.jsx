@@ -1,10 +1,14 @@
 import React from 'react';
 import tibsprocurelogo from '../tibs-procure-logo.jpg';
-import { Page, Header, AppTitle, MenuItem, Menu, ButtonContainer, Button, WelcomeContainer, LogoContainer, AboutContainer, TestContainer, BlackCard, EProcurementContainer, EProcureSubTitle} from './landing.styling';
+import { Page, Header, AppTitle, MenuItem, Menu, ButtonContainer, WelcomeContainer, LogoContainer, AboutContainer, TestContainer, BlackCard, EProcurementContainer, EProcureSubTitle} from './landing.styling';
 
 import Input from '../components/form/input/input.component';
+import Button from '../components/button.component';
 
 function LandingPage() {
+  const handleClick = () => {
+    console.log('Button was clicked!');
+  }
   return (
     <Page > 
       <Header>       
@@ -16,8 +20,8 @@ function LandingPage() {
                 <MenuItem href="#">Contact</MenuItem>            
               </Menu>
               <ButtonContainer>
-                <Button href="#">Login</Button>
-                <Button href="#">Sign Up</Button>    
+                <Button onClick={handleClick}>Login</Button>
+                <Button onClick={handleClick}>Sign Up</Button> 
             </ButtonContainer>
       </Header>
 
