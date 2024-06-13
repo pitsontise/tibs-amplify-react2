@@ -24,15 +24,6 @@ export const Menu = styled.div`
     margin-top: 50px;
 `;
 
-export const Button = styled.a`  
-    background-color: black;
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    margin: 20px 30px 0px 30px;
-    padding: 8px;
-`;
-
 export const ButtonContainer = styled.div`
     margin-top: 50px;
 `;
