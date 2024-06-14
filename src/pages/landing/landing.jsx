@@ -26,6 +26,9 @@ function LandingPage() {
   const goToLogin = () => {
     navigate("/login");
   };
+  const goToSignUp = () => {
+    navigate("/signup");
+  };
   const handleClick = () => {
     console.log("Button was clicked!");
   };
@@ -41,7 +44,7 @@ function LandingPage() {
         </Menu>
         <ButtonContainer>
           <Button title="Login" onClick={goToLogin} />
-          <Button title="Sign Up" onClick={handleClick} />
+          <Button title="Sign Up" onClick={goToSignUp} />
         </ButtonContainer>
       </Header>
 
