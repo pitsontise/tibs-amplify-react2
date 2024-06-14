@@ -1,35 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { InputContainer, ErrorContainer, StyledInput, StyledLabel } from "./input.styling";
+import React from "react";
+import PropTypes from "prop-types";
+import {
+  InputContainer,
+  ErrorContainer,
+  StyledInput,
+  StyledLabel,
+} from "./input.style";
 
 const Input = (props) => {
-    const { type, label, placeholder, error} = props;
+  const { type, label, placeholder, error } = props;
 
-    return (
-        <InputContainer>
-         <StyledLabel>{label}</StyledLabel>
-            <StyledInput
-                label={label}
-                type={type}
-                placeholder={placeholder}
-            />
-            {error && <ErrorContainer>{error}</ErrorContainer>}
-        </InputContainer>
-    );
+  return (
+    <InputContainer>
+      <StyledLabel>{label}</StyledLabel>
+      <StyledInput label={label} type={type} placeholder={placeholder} />
+      {error && <ErrorContainer>{error}</ErrorContainer>}
+    </InputContainer>
+  );
 };
 
 Input.defaultProps = {
-    type: 'text',
-    placeholder: 'Input value',
-    error: undefined,
-  };
+  type: "text",
+  placeholder: "Input value",
+  error: undefined,
+};
 
 Input.propTypes = {
-    type: PropTypes.string,
-    label:  PropTypes.string.isRequired,
-    placeholder: PropTypes.string,
-    error: PropTypes.string,
-  };
-  
+  type: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  error: PropTypes.string,
+};
 
 export default Input;

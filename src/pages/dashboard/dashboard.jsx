@@ -1,5 +1,7 @@
+import UsersAll from "../users/users.all";
+
 const Dashboard = () => {
-  return <>Hello World!</>;
+  return <UsersAll />;
 };
 
 export default Dashboard;

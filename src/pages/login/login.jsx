@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { BackgroundImage, FormContainer } from "./login.styling";
+import { BackgroundImage, FormContainer } from "./login.style";
 import { H2 } from "../../components/utils/typography";
 import Input from "../../components/form/input/input.component";
 import Button from "../../components/button.component";

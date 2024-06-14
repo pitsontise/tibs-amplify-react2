@@ -15,7 +15,7 @@ import {
   BlackCard,
   EProcurementContainer,
   EProcureSubTitle,
-} from "./landing.styling";
+} from "./landing.style";
 
 import Input from "../../components/form/input/input.component";
 import Button from "../../components/button.component";
