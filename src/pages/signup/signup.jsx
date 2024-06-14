@@ -31,8 +31,8 @@ const Signup = () => {
             placeholder="Enter the name of your organisation"
           />
           <Input 
-            label="Title"
-            placeholder="Enter your title in the above organisation"
+            label="Job Title"
+            placeholder="Enter your job title in the organisation"
           />
 
 
