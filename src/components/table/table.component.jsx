@@ -1,24 +1,47 @@
-import { Row, Col } from "react-grid-system";
-import { TableContainer } from "./table.style";
-import { H3 } from "../utils/typography";
+import {
+  TableContainer,
+  TableTitle,
+  StyledTable,
+  TableHeader,
+  Row,
+  Col,
+  Footer,
+} from "./table.style";
+import { useMemo } from "react";
 
 const Table = (props) => {
-  const { title, headers } = props;
+  const { title, headers, data } = props;
+
+  const pagination = useMemo(
+    () => `1 - ${data.length} of ${data.length}`,
+    [data.length]
+  );
 
   return (
-    <>
-      <H3>{title}</H3>
-      <TableContainer>
+    <TableContainer>
+      <TableTitle>{title}</TableTitle>
+      <StyledTable>
         <Row>
           {headers?.map((header) => (
-            <Col style={{ border: "1px gray solid" }}>{header.title}</Col>
+            <TableHeader>{header.title}</TableHeader>
           ))}
         </Row>
-        <Row>
-          <Col></Col>
-        </Row>
-      </TableContainer>
-    </>
+        {data?.map((rowData) => {
+          return (
+            <Row key={rowData.id}>
+              {headers?.map((header) => {
+                return (
+                  <Col key={rowData[header.accessor]}>
+                    {rowData[header.accessor]}
+                  </Col>
+                );
+              })}
+            </Row>
+          );
+        })}
+      </StyledTable>
+      <Footer>{pagination}</Footer>
+    </TableContainer>
   );
 };
 

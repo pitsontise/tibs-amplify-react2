@@ -1,4 +1,5 @@
 import Table from "../../components/table/table.component";
+import { usersData } from "../../data/users";
 
 const UsersAll = () => {
   const headers = [
@@ -28,7 +29,7 @@ const UsersAll = () => {
     },
   ];
 
-  return <Table title="Users" headers={headers} />;
+  return <Table title="Users" headers={headers} data={usersData} />;
 };
 
 export default UsersAll;
