@@ -27,7 +27,7 @@ function LandingPage() {
     navigate("/login");
   };
   const goToSignUp = () => {
-    navigate("/signup");
+    navigate("/sign-up");
   };
   const handleClick = () => {
     console.log("Button was clicked!");

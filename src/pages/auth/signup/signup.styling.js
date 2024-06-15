@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import tibsprocurebackground from "../../res/tibs-procure-background.jpg";
+import tibsprocurebackground from "../../../res/tibs-procure-background.jpg";
 
 export const BackgroundImage = styled.div`
   background-image: url(${tibsprocurebackground});

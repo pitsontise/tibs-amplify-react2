@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router";
-import { BackgroundImage, FormContainer } from "./login.style";
-import { H2 } from "../../components/utils/typography";
-import Input from "../../components/form/input/input.component";
-import Button from "../../components/button.component";
-import colors from "../../components/utils/colors";
-import Card from "../../components/card/Card";
+import {
+  BackgroundImage,
+  FormContainer,
+  ForgotPasswordText,
+} from "./login.style";
+import { H2 } from "../../../components/utils/typography";
+import Input from "../../../components/form/input/input.component";
+import Button from "../../../components/button.component";
+import colors from "../../../components/utils/colors";
+import Card from "../../../components/card/Card";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,6 +24,9 @@ const Login = () => {
             placeholder="Please enter password"
             type="password"
           />
+          <ForgotPasswordText onClick={() => navigate("/forgot-password")}>
+            Forgot password
+          </ForgotPasswordText>
           <Button
             title="Login"
             width="150px"

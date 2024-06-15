@@ -22,6 +22,8 @@ export const StyledTable = styled.table`
   border-spacing: 0px;
 `;
 
+export const TableBody = styled.tbody``;
+
 export const TableHeader = styled.td`
   font-size: 10pt;
   border-right: 1px ${colors.GREY1} solid;

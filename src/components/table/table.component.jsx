@@ -2,6 +2,7 @@ import {
   TableContainer,
   TableTitle,
   StyledTable,
+  TableBody,
   TableHeader,
   Row,
   Col,
@@ -21,24 +22,26 @@ const Table = (props) => {
     <TableContainer>
       <TableTitle>{title}</TableTitle>
       <StyledTable>
-        <Row>
-          {headers?.map((header) => (
-            <TableHeader>{header.title}</TableHeader>
-          ))}
-        </Row>
-        {data?.map((rowData) => {
-          return (
-            <Row key={rowData.id}>
-              {headers?.map((header) => {
-                return (
-                  <Col key={rowData[header.accessor]}>
-                    {rowData[header.accessor]}
-                  </Col>
-                );
-              })}
-            </Row>
-          );
-        })}
+        <TableBody>
+          <Row>
+            {headers?.map((header) => (
+              <TableHeader key={header.title}>{header.title}</TableHeader>
+            ))}
+          </Row>
+          {data?.map((rowData) => {
+            return (
+              <Row key={rowData.id}>
+                {headers?.map((header) => {
+                  return (
+                    <Col key={rowData[header.accessor]}>
+                      {rowData[header.accessor]}
+                    </Col>
+                  );
+                })}
+              </Row>
+            );
+          })}
+        </TableBody>
       </StyledTable>
       <Footer>{pagination}</Footer>
     </TableContainer>

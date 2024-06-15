@@ -20,6 +20,4 @@ export const Tab = styled.div`
     ${(props) => (props.selected ? selectedColor : defaultColor)};
 `;
 
-export const Content = styled.div`
-  ${(props) => (props.active ? "" : "display:none")}
-`;
+export const Content = styled.div``;

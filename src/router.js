@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "./pages/landing/landing";
-import Login from "./pages/login/login";
+import Login from "./pages/auth/login/login";
 import Dashboard from "./pages/dashboard/dashboard";
-import Signup from "./pages/signup/signup";
-import CompleteSignUp from "./pages/user-sign-up/completeSignUp";
+import Signup from "./pages/auth/signup/signup";
+import CompleteSignUp from "./pages/auth/user-sign-up/completeSignUp";
+import ForgotPasword from "./pages/auth/forgot-password/forgotPasword";
+import ResetPassword from "./pages/auth/reset-password/resetPasword";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +29,16 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/signup",
+    path: "/sign-up",
     element: <Signup />,
+  },
+  {
+    path: "/forgot-password",
+    element: <ForgotPasword />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
   },
 ]);
 

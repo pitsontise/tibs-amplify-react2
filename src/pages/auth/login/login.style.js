@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import tibsprocurebackground from "../../res/tibs-procure-background.jpg";
+import tibsprocurebackground from "../../../res/tibs-procure-background.jpg";
+import colors from "../../../components/utils/colors";
 
 export const BackgroundImage = styled.div`
   background-image: url(${tibsprocurebackground});
@@ -19,4 +20,11 @@ export const FormContainer = styled.div`
   flex-direction: column;
   width: 30vw;
   height: auto;
+`;
+
+export const ForgotPasswordText = styled.a`
+  margin-top: 10px;
+  font-size: 8pt;
+  color: ${colors.PRIMARY};
+  text-decoration: underline;
 `;
