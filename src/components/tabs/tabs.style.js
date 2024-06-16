@@ -1,23 +1,41 @@
 import styled from "styled-components";
+import colors from "../utils/colors";
 
-export const TabContainer = styled.div`
+export const StyledTabs = styled.div`
   display: flex;
   width: 100%;
-  background: red;
   align-items: stretch;
+  padding-left: 10px;
 `;
-
-const selectedColor = "rgb(30,190,230)";
-const defaultColor = "transparent";
 
 export const Tab = styled.div`
+  width: 9%;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: center;
+
   background-color: white;
-  width: 100%;
-  padding: 10px;
+  padding: 8px 5px 10px 5px;
   cursor: pointer;
   transition: 0.3s;
-  border-bottom: 4px solid
-    ${(props) => (props.selected ? selectedColor : defaultColor)};
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 1px solid ${colors.GREY1};
+  border-left: 1px solid ${colors.GREY1};
+  border-right: 1px solid ${colors.GREY1};
+  border-bottom: 3px solid
+    ${({ active }) => (active ? colors.PRIMARY : "transparent")};
+  font-weight: ${({ active }) => (active ? "550" : "400")};
+  margin-right: 0px;
+  font-size: 11pt;
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  ${(props) => (props.active ? "" : "display:none")}
+`;

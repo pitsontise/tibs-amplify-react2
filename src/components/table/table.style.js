@@ -53,7 +53,6 @@ export const Footer = styled.tr`
   border-right: 1px ${colors.GREY1} solid;
   padding-right: 12px;
   font-size: 9pt;
-  width: 95vw;
   position: relative;
   left: 0px;
   background-color: ${colors.GREY2};

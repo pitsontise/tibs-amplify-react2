@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
-  margin: 5px 0px 20px 0px;
+  margin: 5px 0px 30px 0px;
 `;
 
 export const ErrorContainer = styled.div`

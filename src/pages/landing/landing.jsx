@@ -26,12 +26,11 @@ function LandingPage() {
   const goToLogin = () => {
     navigate("/login");
   };
+
   const goToSignUp = () => {
     navigate("/sign-up");
   };
-  const handleClick = () => {
-    console.log("Button was clicked!");
-  };
+
   return (
     <Page>
       <Header>

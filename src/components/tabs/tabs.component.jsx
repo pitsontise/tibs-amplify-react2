@@ -1,8 +1,7 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { TabContainer, Tab, Content } from "./tabs.style";
+import React, { useEffect, useCallback, useMemo, useState } from "react";
+import { StyledTabs, Tab, Content } from "./tabs.style";
 
-const Tabs = (props) => {
-  const { data } = props;
+const Tabs = ({ data }) => {
   const [active, setActive] = useState(0);
   const [tabs, setTabs] = useState([]);
 
@@ -32,32 +31,31 @@ const Tabs = (props) => {
         <Tab
           key={`tab-${tab.id}`}
           onClick={handleClick}
-          selected={active === tab.id}
+          active={active === tab.id}
           id={tab.id}
         >
-          Tab: {tab.title}
+          {tab.title}
         </Tab>
       ));
     }
-    return <>No data to display.</>;
+    return <>No tabs to display.</>;
   }, [active, tabs, handleClick]);
 
-  console.log(getTabs);
-
-  const getTabContent = useMemo(() => {
+  const getTabsContent = useMemo(() => {
     if (tabs?.length) {
-      const tabData = tabs.find((tab) => active === tab.id);
-
-      return tabData.component;
+      return tabs.map((tab) => (
+        <Content key={`content-${tab.id}`} active={active === tab.id}>
+          {tab.component}
+        </Content>
+      ));
     }
     return <>No data to display.</>;
   }, [active, tabs]);
 
   return (
     <>
-      {tabs?.length && <Tabs>{getTabs}</Tabs>}
-      {tabs?.length && <Content>{getTabContent}</Content>}
-      {!tabs && <>No data to display.</>}
+      <StyledTabs>{getTabs}</StyledTabs>
+      {getTabsContent}
     </>
   );
 };

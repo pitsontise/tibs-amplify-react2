@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  background-color: ${({ backgroundColor }) => backgroundColor ?? "black"};
+  background-color: ${({ backgroundcolor }) => backgroundcolor ?? "black"};
   width: ${({ width }) => width ?? "inital"};
   color: white;
   font-weight: 700;
@@ -18,7 +18,7 @@ const Button = ({ title, onClick, backgroundColor, width }) => {
     <StyledButton
       type="button"
       width={width}
-      backgroundColor={backgroundColor}
+      backgroundcolor={backgroundColor}
       onClick={onClick}
     >
       {title}
